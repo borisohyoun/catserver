@@ -21,6 +21,28 @@
 </head>
 
 <body class="container ">
+
+{{ posts }}
+
+{% for post in posts %}
+    {{ post }}
+{% endfor %}
+
+
+<div>
+    <h1><a href="/">Django Girls Blog</a></h1>
+</div>
+
+{% for post in posts %}
+    <div>
+        <p>published: {{ post.published_date }}</p>
+        <h1><a href="">{{ post.title }}</a></h1>
+        <p>{{ post.text|linebreaksbr }}</p>
+    </div>
+{% endfor %}
+
+
+
     <div id="maintitle" class="col-md-12 row justify-content-md-center order-first">
         <div class="maintitleimg col-md-2 "><img src="img/flower.png" alt=""></div>
         <div class="maintitletext col">
