@@ -1,62 +1,40 @@
-<!DOCTYPE html>
-<html lang="en">
-
+{% load static %}
+<html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="{% static 'css/reset.css' %}">
     <link href="https://fonts.googleapis.com/css?family=Yeon+Sung" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=East+Sea+Dokdo" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Dokdo" rel="stylesheet">
-    <link rel="stylesheet" href="bootstrap-3.3.7-dist/bootstrap-3.3.7-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="{% static 'css/bootstrap-3.3.7-dist/bootstrap-3.3.7-dist/css/bootstrap.css' %}">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="fontello/css/fontello.css">
+    <link rel="stylesheet" href="{% static 'css/fontello/css/fontello.css' %}">
     <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-   <link rel="stylesheet" href="jquery-ui-1.12.1.custom">
-   <link rel="stylesheet" media="all and (min-width:770px)" href="catnav.css">
-    <link rel="stylesheet" href="catnav.css">
-    <script src="js/catnav.js"></script>
+   <link rel="stylesheet" href="{% static 'jquery-ui-1.12.1.custom' %}">
+
+    <link rel="stylesheet" media="all and (min-width:770px)" href="{% static 'css/catnav.css' %}">
+    <script src="{% static 'js/catnav.js' %}"></script>
     <title>보리통신문-메인페이지입니다.</title>
 </head>
 
 <body class="container ">
-
-{{ posts }}
-
 {% for post in posts %}
-    {{ post }}
-{% endfor %}
-
-
-<div>
-    <h1><a href="/">Django Girls Blog</a></h1>
-</div>
-
-{% for post in posts %}
-    <div>
-        <p>published: {{ post.published_date }}</p>
-        <h1><a href="">{{ post.title }}</a></h1>
-        <p>{{ post.text|linebreaksbr }}</p>
-    </div>
-{% endfor %}
-
-
-
     <div id="maintitle" class="col-md-12 row justify-content-md-center order-first">
-        <div class="maintitleimg col-md-2 "><img src="img/flower.png" alt=""></div>
+        <div class="maintitleimg col-md-2 "><img src="{% static 'img/flower.png' %}" alt=""></div>
         <div class="maintitletext col">
             <div class="catschool">보리통신문</div>
             <div class="catclass">이냥저냥 - 1호 </div>
         </div>
-        <div class="maintitleimg col-md-2"><img src="img/flower.png" alt=""></div>
+        <div class="maintitleimg col-md-2"><img src="{% static 'img/flower.png' %}" alt=""></div>
     </div>
     <div class="activeZone row">
         <div id="catnav" class="col-md-2">
             <ul class="navchart">
                 
                 <li class="navhealth">
-                    <div class="titlemenu"><img src="img/footmenu.png" alt="">건강기록</div>
+                    <div class="titlemenu"><img src="{% static 'img/footmenu.png' %}" alt="">건강기록</div>
                     <div class="submenu">
                         <div class="navmedi">
                             <div class="nav4">구충제</div>
@@ -70,7 +48,7 @@
                     </div>
                 </li>
                 <li class="navbookmark">
-                    <div class="titlemenu"><img src="img/footmenu.png" alt="">용품</div>
+                    <div class="titlemenu"><img src="{% static 'img/footmenu.png' %}" alt="">용품</div>
                     <div class="submenu">
                     </div>
                 </li>
@@ -85,12 +63,12 @@
                 <div class="firstpage row order-last">
                     <div class="adbanner row col-md-12">
                         <div class="adslides col-md-12">
-                            <a><img src="img/banner/banner1.jpg" alt=""></a>
-                            <a><img src="img/banner/banner2.jpg" alt=""></a>
-                            <a><img src="img/banner/banner3.jpg" alt=""></a>
-                            <a><img src="img/banner/banner4.jpg" alt=""></a>
-                            <a><img src="img/banner/banner5.jpg" alt=""></a>
-                            <a><img src="img/banner/banner6.jpg" alt=""></a>
+                            <a><img src="{% static 'img/banner/banner1.jpg' %}" alt=""></a>
+                            <a><img src="{% static 'img/banner/banner2.jpg' %}" alt=""></a>
+                            <a><img src="{% static 'img/banner/banner3.jpg' %}" alt=""></a>
+                            <a><img src="{% static 'img/banner/banner4.jpg' %}" alt=""></a>
+                            <a><img src="{% static 'img/banner/banner5.jpg' %}" alt=""></a>
+                            <a><img src="{% static 'img/banner/banner6.jpg' %}" alt=""></a>
                         </div>
                         <div class="bannerbtn col-md-12">
                             <button type="button" class="prev icon-angle-left">&lt;</button>
@@ -142,8 +120,8 @@
         </div>
     </footer>
 
-    <script src="js/catnav.js"></script>
-
+    <script src="{% static 'js/catnav.js' %}"></script>
+{% endfor %}
 </body>
 
 </html>

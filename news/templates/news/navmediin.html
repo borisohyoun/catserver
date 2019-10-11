@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport">
+    <link rel="stylesheet" href="reset.css">
+    <script src="http://code.jquery.com/jquery-1.12.4.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Yeon+Sung" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=East+Sea+Dokdo" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Dokdo" rel="stylesheet">
+    <link rel="stylesheet" href="bootstrap-3.3.7-dist/bootstrap-3.3.7-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="fontello/css/fontello.css">
+    <link rel="stylesheet" href="catnav.css">
+    <link rel="stylesheet" href="js/catnav.js">
+    <script src="https://canvasjs.com/assets/script/jquery-1.11.1.min.js"></script>
+    <script src="https://canvasjs.com/assets/script/jquery.canvasjs.min.js"></script>
+    <title>구충내역</title>
+    <script>
+        window.onload = function () {
+
+            //Better to construct options first and then pass it as a parameter
+            var options = {
+                title: {
+                    text: "내부구충제 접종 기록"
+                },
+                animationEnabled: true,
+                exportEnabled: true,
+                data: [{
+                    type: "spline", //change it to line, area, column, pie, etc
+                    dataPoints: [{
+                            x: 19 / 1,
+                            y: 3
+                        },
+                        {
+                            x: 19 / 2,
+                            y: 12
+                        },
+                        {
+                            x: 19 / 3,
+                            y: 8
+                        },
+                        {
+                            x: 19 / 4,
+                            y: 14
+                        },
+                        {
+                            x: 19 / 5,
+                            y: 6
+                        },
+                        {
+                            x: 19 / 6,
+                            y: 24
+                        },
+                        {
+                            x: 19 / 7,
+                            y: 7
+                        },
+                        {
+                            x: 19 / 8,
+                            y: 10
+                        }
+                    ]
+                }]
+            };
+            $("#chartContainer").CanvasJSChart(options);
+
+        }
+    </script>
+    <style>
+        .cal_glance {
+            height: 100px;
+        }
+
+        .cal_glance li {
+            height: 80px;
+        }
+
+        .glance_month {
+            font-size: 1.2rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="snavmedi container">
+        <div class="snavmediin">
+            <div class="cattitle">구충내역</div>
+            <div class="memodate">
+                <div class="prolist col-sm-12 col-md-4">
+                    <form action="">
+                        <div class="form-group">
+                            <label for="mediType">구충 종류</label>
+                            <select name="" id="">
+                                <option value="내부구충제">내부구충제</option>
+                                <option value="외부구충제">외부구충제</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputDate">구충 날짜</label>
+                            <input type="date" max="9999-12-31" id='currentDate'>
+                            <script>
+                                document.getElementById('currentDate').value = new Date().toISOString().substring(0, 10);;
+                            </script>
+                        </div> 
+                        <div class="form-group">
+                            <button type="button" class="btn btn-success btn-lg float-right" id="submit-button">Register</button>
+                            <input type="submit" class="hide" id="real-submit" />
+                        </div>
+                    </form>
+                </div> 
+                <div id="chartContainer" class="memograph col-sm-12 col-md-8"
+                style="height: 300px;"></div>
+                </div>                 
+            </div> 
+        </div>
+    </div>
+
+    <script src="https://canvasjs.com/assets/script/jquery-1.11.1.min.js"></script>
+    <script src="https://canvasjs.com/assets/script/jquery.canvasjs.min.js"></script>
+</body>
+
+</html>

@@ -20,4 +20,10 @@ from django.conf.urls import include
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('news.urls')),
+    path('', include('navmediin.urls')),
+    path('', include('navhos.urls')),
+    path('', include('news.urls')),
+    path('', include('news.urls')),
+    path('', include('news.urls')),
+
 ]
