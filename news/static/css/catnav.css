@@ -706,7 +706,10 @@ select{
     font-size: 15px;
     line-height: 25px;
 }
-
+.write *{
+    font-size: 15px;
+    line-height: 25px;
+}
 .history {
     line-height: 30px;
     border-right: 2px dashed black;

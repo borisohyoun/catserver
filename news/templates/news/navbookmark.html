@@ -1,19 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport">
-    <link rel="stylesheet" href="reset.css">
-    <script src="http://code.jquery.com/jquery-1.12.4.js"></script>
-    <link href="https://fonts.googleapis.com/css?family=Yeon+Sung" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=East+Sea+Dokdo" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Dokdo" rel="stylesheet">
-    <link rel="stylesheet" href="bootstrap-3.3.7-dist/bootstrap-3.3.7-dist/css/bootstrap.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="fontello/css/fontello.css">
-    <link rel="stylesheet" href="catnav.css">
-    <title>용품</title>
+{% extends 'news/base.html' %}
+{% load static from staticfiles %}
     <script>
         function previewImage(targetObj, View_area) {
             var preview = document.getElementById(View_area); //div id
@@ -86,8 +72,7 @@
         }
     </script>
 </head>
-
-<body>
+{% block body %}
     <div class="snavbookmark container">
         <div class="cattitle">
             용품 구매 기록과 후기
@@ -236,6 +221,5 @@
             </div>
         </div>
     </div>
-</body>
 
-</html>
+{% endblock %}

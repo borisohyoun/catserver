@@ -19,11 +19,7 @@ from django.conf.urls import include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('news.urls')),
-    path('', include('navmediin.urls')),
-    path('', include('navhos.urls')),
-    path('', include('news.urls')),
-    path('', include('news.urls')),
-    path('', include('news.urls')),
+    path('main/', include('news.urls')),
+    path('navbookmark/', include('news.urls')),
 
 ]

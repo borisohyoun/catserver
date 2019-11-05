@@ -201,27 +201,37 @@
         // };
         // $("#chartContainer").CanvasJSChart(options);
         
-        //catnav
-        $('.navmedi').on('click', function () {
-            $('.firstpage').empty();
-            $('.firstpage').load('navmediout.html .snavmediout');
-        });
-        $('.navhos').on('click', function () {
-            $('.firstpage').empty();
-            $('.firstpage').load('navhos.html .snavhos');
-        });
-        $('.navmemo').on('click', function () {
-            $('.firstpage').empty();
-            $('.firstpage').load('navmemo.html .snavmemo');
-        });
-        $('.navweight').on('click', function () {
-            $('.firstpage').empty();
-            $('.firstpage').load('navweight.html .snavweight');
-        });
-        $('.navbookmark').on('click', function () {
-            $('.firstpage').empty();
-            $('.firstpage').load('navbookmark.html .snavbookmark');
-        });
+
+        //history, userguide border change
+        if(parseInt($('html').css('width'))<=769){
+            $('.history').css('border-right','none'),
+            $('.history').css({'border-bottom':'2px dashed black','padding-bottom':'30px','margin-bottom':'0'})
+        }else{
+            $('.history').css('border-right','2px dashed black');
+        }
+        console.log(parseInt($('html').css('width')));
+
+        // //catnav
+        // $('.navmedi').on('click', function () {
+        //     $('.firstpage').empty();
+        //     $('.firstpage').load('navmediout.html .snavmediout');
+        // });
+        // $('.navhos').on('click', function () {
+        //     $('.firstpage').empty();
+        //     $('.firstpage').load('navhos.html .snavhos');
+        // });
+        // $('.navmemo').on('click', function () {
+        //     $('.firstpage').empty();
+        //     $('.firstpage').load('navmemo.html .snavmemo');
+        // });
+        // $('.navweight').on('click', function () {
+        //     $('.firstpage').empty();
+        //     $('.firstpage').load('navweight.html .snavweight');
+        // });
+        // $('.navbookmark').on('click', function () {
+        //     $('.firstpage').empty();
+        //     $('.firstpage').load('navbookmark.html .snavbookmark');
+        // });
         $('#maintitle').on('click', function () {
             window.location.reload(true);
         });
