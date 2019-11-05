@@ -3,7 +3,7 @@
 
         $('.titlemenu').click('onclick', function () {
             $(this).siblings().css("display", "block");
-            $(this).find('img').attr("src", "img/footallmenu.png");
+            $(this).find('img').attr("src", "/img/footallmenu.png");
 
         })
 
@@ -33,10 +33,10 @@
 
         function tailChange() {
             if (imageType === "mid") {
-                $('.navclock').css('background', 'url("img/tail_right.png") no-repeat  ');
+                $('.navclock').css('background', 'url("static/img/tail_right.png") no-repeat  ');
                 imageType = "right";
             } else {
-                $('.navclock').css('background', 'url("img/tail_mid.png") no-repeat');
+                $('.navclock').css('background', 'url("static/img/tail_mid.png") no-repeat');
                 imageType = "mid";
             }
             setTimeout(tailChange, 1000);
